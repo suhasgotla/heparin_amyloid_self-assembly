@@ -1,0 +1,394 @@
+;This is the itp file for the sequence KLVFFAE
+; Dihedral type: 6, force constant: 0
+; Cysteine bridges active: False
+
+[moleculetype]
+;molname		nrexcl
+Protein5		 1
+
+[atoms]
+;id              type            resnr           residue       atom             cgnr             charge
+1                PP5             1               LYS           BB               1                0.0000
+2                D2              1               LYS           BBp              2                0.3400
+3                D2              1               LYS           BBm              2                -0.3400
+4                C3              1               LYS           S1               3                0.0000
+5                Qd_r1p5         1               LYS           S2               4                1.0000
+6                PP5             2               LEU           BB               5                0.0000
+7                D2              2               LEU           BBp              6                0.3400
+8                D2              2               LEU           BBm              6                -0.3400
+9                C1              2               LEU           S1               7                0.0000
+10               PP5             3               VAL           BB               8                0.0000
+11               D2              3               VAL           BBp              9                0.3400
+12               D2              3               VAL           BBm              9                -0.3400
+13               C3              3               VAL           S1               10               0.0000
+14               PP5             4               PHE           BB               11               0.0000
+15               D2              4               PHE           BBp              12               0.3400
+16               D2              4               PHE           BBm              12               -0.3400
+17               AR_r4p5         4               PHE           S1               13               0.0000
+18               AR_r4p5         4               PHE           S2               14               0.0000
+19               AR_r4p5         4               PHE           S3               15               0.0000
+20               PP5             5               PHE           BB               16               0.0000
+21               D2              5               PHE           BBp              17               0.3400
+22               D2              5               PHE           BBm              17               -0.3400
+23               AR_r5p5         5               PHE           S1               18               0.0000
+24               AR_r5p5         5               PHE           S2               19               0.0000
+25               AR_r5p5         5               PHE           S3               20               0.0000
+26               PP5             6               ALA           BB               21               0.0000
+27               D2              6               ALA           BBp              22               0.3400
+28               D2              6               ALA           BBm              22               -0.3400
+29               PP5             7               GLU           BB               23               0.0000
+30               D2              7               GLU           BBp              24               0.3400
+31               D2              7               GLU           BBm              24               -0.3400
+32               C3              7               GLU           S1               25               0.0000
+33               Qa              7               GLU           S2               26               -1.0000
+
+[bonds]
+;bonds between BB and dummies
+1               2            1				0.14		   5000
+1               3            1				0.14		   5000
+6               7            1				0.14		   5000
+6               8            1				0.14		   5000
+10              11           1				0.14		   5000
+10              12           1				0.14		   5000
+14              15           1				0.14		   5000
+14              16           1				0.14		   5000
+20              21           1				0.14		   5000
+20              22           1				0.14		   5000
+26              27           1				0.14		   5000
+26              28           1				0.14		   5000
+29              30           1				0.14		   5000
+29              31           1				0.14		   5000
+
+;bonds between S1 and dummies
+
+;bonds between S2 and dummies
+
+;bonds between S3 and dummies
+
+;bonds between S3 and dummies
+
+;bonds between S1 bead and BB bead
+1               4            1				0.25		   5000
+6               9            1				0.25		   5000
+10              13           1				0.25		   5000
+14              17           1				0.25		   5000
+20              23           1				0.25		   5000
+29              32           1				0.25		   5000
+
+;bonds between S1 bead and S2 bead
+4               5            1				0.28		   5000
+32              33           1				0.28		   5000
+
+;bonds between BB and BB beads
+1               6            1				0.385		   7500
+6               10           1				0.385		   7500
+10              14           1				0.385		   7500
+14              20           1				0.385		   7500
+20              26           1				0.385		   7500
+26              29           1				0.385		   7500
+
+;Bond between PRO-S1 and BB-Prev
+
+;Cys-Cys bridges: Cys_a-S1 to Cys_b-S1
+
+[constraints]
+;constraints between S1 and S2 beads for W Y F H
+17              18           1				0.27
+23              24           1				0.27
+
+;constraints between S2 and S3 beads for Y F
+18              19           1				0.27
+24              25           1				0.27
+
+;constraints between S1 and S3 beads for Y F
+17              19           1				0.27
+23              25           1				0.27
+
+;constraints between S1 and S3 beads for W
+
+;constraints between S2 and S3 beads for W
+
+;constraints between S2 and S4 beads for W
+
+;constraints between S3 and S4 beads for W
+
+;constraints between S1 and S3 beads for H
+
+;constraints between S2 and S3 beads for H
+
+[angles]
+;atom1/dummy  	atom2/BB 	atom3/dummy 	func 		 angle 	force.cons
+;angles between BB and dummies
+2               1               3               2 		 180	  7.2
+7               6               8               2 		 180	  7.2
+11              10              12              2 		 180	  7.2
+15              14              16              2 		 180	  7.2
+21              20              22              2 		 180	  7.2
+27              26              28              2 		 180	  7.2
+30              29              31              2 		 180	  7.2
+
+;angles between S1 and dummies
+
+;angles between S2 and dummies - W H
+
+;angles between S3 and dummies - Y
+
+;angles between S3 and dummies - H
+
+;angles between BB and BB beads
+1               6               10              2 		 109	  75
+6               10              14              2 		 109	  75
+10              14              20              2 		 109	  75
+14              20              26              2 		 109	  75
+20              26              29              2 		 109	  75
+
+;angles between BB-BB-S1
+1               6               9               8   23               	1
+6               10              13              8   35               	1
+10              14              17              8   25               	1
+14              20              23              8   25               	1
+26              29              32              8   29               	1
+
+;angles between BB'-BB-S1
+
+;angles between BB-S1-S2
+1               4               5               2			   151	   25.0
+29              32              33              2			   180	   25.0
+
+;angles between BB-S1-S2 for F Y H
+14              17              18              2			   150	   50.0
+20              23              24              2			   150	   50.0
+
+;angles between BB-S1-S3 for F Y
+14              17              19              2			   150	   50.0
+20              23              25              2			   150	   50.0
+
+;angles between BB-S1-S3 for H
+
+;angles between BB-S1-S2 for W
+
+;angles between BB-S1-S3 for W
+
+[dihedrals]
+; i   j  k  l  funct  tableno  k
+;tabulated dihedrals between BB and BB beads
+1 	6 	10 	14 	8 	6 	0
+6 	10 	14 	20 	8 	6 	0
+10 	14 	20 	26 	8 	6 	0
+14 	20 	26 	29 	8 	6 	0
+
+;Dihedral between BB-S2-S3-S1 for F Y
+14              18              19              17              2 		  0	 50
+20              24              25              23              2 		  0	 50
+
+;Dihedral between BB-S2-S3-S1 for H
+
+;Dihedral between BB-S2-S3-S1 for W
+
+;Dihedral between S1-S2-S4-S3 for W ... preserve planirity
+
+[exclusions]
+;backbone dummy within bead
+2         3
+7         8
+11        12
+15        16
+21        22
+27        28
+30        31
+
+;backbone main site to main site 1-3
+1         10
+6         14
+10        20
+14        26
+20        29
+
+;backbone main site to dummy 1-2
+1         7
+1         8
+6         11
+6         12
+10        15
+10        16
+14        21
+14        22
+20        27
+20        28
+26        30
+26        31
+2         6
+3         6
+7         10
+8         10
+11        14
+12        14
+15        20
+16        20
+21        26
+22        26
+27        29
+28        29
+
+;backbone dummy to dummy 1-2 ;replaced by tuning fudgeQQ
+2         7
+2         8
+3         7
+3         8
+7         11
+7         12
+8         11
+8         12
+11        15
+11        16
+12        15
+12        16
+15        21
+15        22
+16        21
+16        22
+21        27
+21        28
+22        27
+22        28
+27        30
+27        31
+28        30
+28        31
+
+;backbone dummy to dummy 1-3
+
+;sidechain S1 to backbone dummy 1-2
+4         2
+4         3
+9         7
+9         8
+13        11
+13        12
+17        15
+17        16
+23        21
+23        22
+32        30
+32        31
+
+;sidechain S1 main bead to backbone dummy 1-3 (Optional)
+
+;side chain S1 dummy within bead
+
+;side chain S1 dummy to backbone bead
+
+;side chain S1 dummy to backbone dummy 1-2 ;replaced by tuning fudgeQQ
+
+;sidechain S1 dummy to backbone dummy 1-3
+
+;sidechain backbone S2 to sidechain S1 dummy
+
+;sidechain S2 to backbone BB 1-3
+1         5
+29        33
+
+;sidechain S2 main bead to backbone dummy 1-3
+5         2
+5         3
+33        30
+33        31
+
+;Specific Exclusions for Disulfide/dicysteine bridges
+; Scheme: BB--S1--S1'--BB'
+; CYS bridge BB<--x-->S1' and BB'<--x-->S1 exclusions 1-3
+
+; CYS bridge BB dummies<--x-->S1' and BB' dummies<--x-->S1 exclusions 1-3
+
+;Specific Exclusions for aromatic residues
+
+;For F
+;BB to sidechain main site S2
+14        18
+20        24
+
+;BB to sidechain main site S3
+14        19
+20        25
+
+;For Y
+;side chain S3 dummy within bead
+;side chain S3 dummy to sidechain main site S1
+
+;side chain S3 dummy to sidechain main site S2
+
+;side chain S3 dummy to sidechain main site S1
+
+;BB to sidechain main site S2
+
+;BB to sidechain main site S3
+
+;For W
+;side chain S2 dummy within bead
+;side chain S2 dummy to sidechain main site S1
+
+;side chain S2 dummy to sidechain main site S3
+
+;side chain S2 dummy to sidechain main site S4
+
+;BB to sidechain main site S2
+
+;BB to sidechain main site S3
+
+;S4 to sidechain main site S1
+
+;For H
+;side chain S2 dummy within bead
+;For H
+;side chain S3 dummy within bead
+;side chain S2 dummy to sidechain main site S1
+
+;side chain S3 dummy to sidechain main site S1
+
+;side chain S2 dummy to sidechain main site S3
+
+;side chain S2 dummy to sidechain main site S3-dummies
+
+;side chain S2 dummy to sidechain main site S3-dummies
+
+;side chain S2 dummy to sidechain main site BB-dummies
+
+;side chain S2 dummy to sidechain main site BB-dummies
+
+;side chain S3 dummy to sidechain main site BB-dummies
+
+;side chain S3 dummy to sidechain main site BB-dummies
+
+;BB to sidechain main site S2
+
+;BB to sidechain main site S3
+
+[pairs]
+;1-2 dummy-dummy interactions
+;backbone dummy to dummy 1-2
+2         7         1         0.0          0.0
+2         8         1         0.0          0.0
+3         7         1         0.0          0.0
+3         8         1         0.0          0.0
+7         11        1         0.0          0.0
+7         12        1         0.0          0.0
+8         11        1         0.0          0.0
+8         12        1         0.0          0.0
+11        15        1         0.0          0.0
+11        16        1         0.0          0.0
+12        15        1         0.0          0.0
+12        16        1         0.0          0.0
+15        21        1         0.0          0.0
+15        22        1         0.0          0.0
+16        21        1         0.0          0.0
+16        22        1         0.0          0.0
+21        27        1         0.0          0.0
+21        28        1         0.0          0.0
+22        27        1         0.0          0.0
+22        28        1         0.0          0.0
+27        30        1         0.0          0.0
+27        31        1         0.0          0.0
+28        30        1         0.0          0.0
+28        31        1         0.0          0.0
+
+;side chain S1 dummy to backbone dummy 1-2 ;replaced by tuning fudgeQQ

@@ -1,0 +1,5 @@
+; restraining the BB bead of F22 of the 16-KLVFFAE-22 amyloid-beta fragment
+
+[ position_restraints ]
+; atom  type      fx      fy      fz
+14	1	100	100	100
