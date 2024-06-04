@@ -1,0 +1,6 @@
+; restraining BG beads of heparin dp2
+
+[ position_restraints ]
+; atom  type      fx      fy      fz
+1	1	1000.0	1000.0	1000.0
+9	1	1000.0	1000.0	1000.0

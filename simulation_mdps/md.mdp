@@ -1,0 +1,49 @@
+define			= 
+integrator              = md
+dt                      = 0.01
+tinit			= 0
+nsteps                  = 300000000 ; 3000 ns
+nstxout                 = 100000
+nstvout                 = 100000
+nstfout                 = 
+nstcalcenergy           = 100
+nstxout-compressed	= 1000
+compressed-x-precision	= 200
+compressed-x-grps	= Protein Heparin CL_NA
+nstenergy               = 1000
+nstlog                  = 1000
+;
+cutoff-scheme           = group
+nstlist                 = 10
+rlist                   = 1.6
+coulombtype             = PME
+coulomb-modifier	= None
+rcoulomb                = 1.6
+epsilon-r		= 2.5
+
+vdwtype                 = Cut-off
+vdw-modifier            = Force-switch ; equivalent to vdw-type = switch
+rvdw_switch             = 0.9
+rvdw                    = 1.2
+;
+tcoupl                  = Nose-Hoover
+nsttcouple		= 1
+tc_grps                 = Protein Heparin Solvent
+tau_t                   = 1.0 1.0 1.0
+ref_t                   = 350 350 350
+;
+pcoupl                  = Parrinello-Rahman
+pcoupltype              = isotropic
+nstpcouple		= 1
+tau_p                   = 5.0
+compressibility         = 3.5e-5
+ref_p                   = 1.0
+;
+constraints             = none
+constraint_algorithm    = LINCS
+;
+nstcomm                 = 100
+comm_mode               = linear
+comm_grps               = SYSTEM
+;
+refcoord_scaling        = com
