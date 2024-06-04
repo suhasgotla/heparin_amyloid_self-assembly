@@ -1,0 +1,87 @@
+#include "../ff/other_itps/forcefield.itp"
+
+#ifdef POSRE
+#include "../ff/protein_itps/pep1.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep2.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep3.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep4.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep5.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep6.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep7.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep8.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep9.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep10.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep11.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep12.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep13.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep14.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep15.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/protein_itps/pep16.itp"
+#include "../ff/protein_itps/abeta_posre.itp"
+#include "../ff/heparin_itps/heparin_dp18.itp"
+#include "../ff/heparin_itps/posre_heparin_dp18.itp"
+#else
+#include "../ff/protein_itps/pep1.itp"
+#include "../ff/protein_itps/pep2.itp"
+#include "../ff/protein_itps/pep3.itp"
+#include "../ff/protein_itps/pep4.itp"
+#include "../ff/protein_itps/pep5.itp"
+#include "../ff/protein_itps/pep6.itp"
+#include "../ff/protein_itps/pep7.itp"
+#include "../ff/protein_itps/pep8.itp"
+#include "../ff/protein_itps/pep9.itp"
+#include "../ff/protein_itps/pep10.itp"
+#include "../ff/protein_itps/pep11.itp"
+#include "../ff/protein_itps/pep12.itp"
+#include "../ff/protein_itps/pep13.itp"
+#include "../ff/protein_itps/pep14.itp"
+#include "../ff/protein_itps/pep15.itp"
+#include "../ff/protein_itps/pep16.itp"
+#include "../ff/heparin_itps/heparin_dp18.itp"
+#endif
+
+#include "../ff/other_itps/ions.itp"
+
+#ifdef FLEXIBLE
+#include "../ff/other_itps/water_em.itp"
+#else
+#include "../ff/other_itps/water.itp"
+#endif
+
+[system]
+16 x abeta + 1 dp18 heparin
+
+[molecules]
+Protein1         1
+Protein2         1
+Protein3         1
+Protein4         1
+Protein5         1
+Protein6         1
+Protein7         1
+Protein8         1
+Protein9         1
+Protein10        1
+Protein11        1
+Protein12        1
+Protein13        1
+Protein14        1
+Protein15        1
+Protein16        1
+Heparin_dp18     1
+PW              7600
